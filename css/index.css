@@ -305,6 +305,9 @@ img {
 .home .content-destination img {
   border-radius: 10px;
 }
+.home form {
+  margin-bottom: 15px;
+}
 .home .content-pick {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
