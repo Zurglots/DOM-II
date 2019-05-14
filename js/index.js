@@ -63,6 +63,7 @@ const form = document.getElementById("form");
 form.addEventListener(
   "focus",
   event => {
+    event.preventDefault();
     event.target.style.background = "pink";
   },
   true
@@ -71,10 +72,23 @@ form.addEventListener(
 form.addEventListener(
   "blur",
   event => {
+    // event.preventDefault();
     event.target.style.background = "";
   },
   true
 );
+
+submitButton = document.querySelector("button");
+
+submitButton.addEventListener("click", event => {
+  event.preventDefault();
+});
+
+//   if (input.type == "") {
+//     button.target.style.background = "red";
+//   } else {
+//     button.target.style.background = "green";
+//   }
 
 // resize
 
