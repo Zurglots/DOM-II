@@ -96,11 +96,11 @@ submitButton.addEventListener("click", event => {
 
 // scroll
 
-const myScroller = document.querySelector("body");
-console.log(myScroller);
+const myScroller = document.querySelector("header");
+// console.log("myScroller"); it's firing when listening for click, no change on scroll.
 
 myScroller.addEventListener("scroll", event => {
-  event.target.style.background = "red";
+  event.target.style.backgroundColor = "red";
 });
 
 // myScroller.forEach(link => {
@@ -108,3 +108,22 @@ myScroller.addEventListener("scroll", event => {
 //     event.style.color = "red";
 //   });
 // });
+
+// window.addEventListener('click', event=> {
+//     console.log("windowClick!")
+// });
+
+// dbl click example and eventPropagation Example
+
+const contentSection = document.querySelector(".content-section");
+const contentText = document.querySelector(".text-content");
+
+contentSection.addEventListener("dblclick", event => {
+  event.target.style.backgroundColor = "blue";
+  console.log("clicked content!!");
+});
+
+contentText.addEventListener("dblclick", event => {
+  event.stopPropagation();
+  event.target.style.backgroundColor = "red";
+});
