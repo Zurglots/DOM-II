@@ -66,9 +66,13 @@ function reportWindowSize() {
 
 window.onresize = reportWindowSize;
 
-// window.addEventListener("resize", event => {
-//   event.target.style.backgroundColor = "red";
-// });
+// select
+
+const theText = document.getElementsByTagName("p");
+
+theText.addEventListener("select", event => {
+  event.target.style.textColor = "purple";
+});
 
 // onload
 
