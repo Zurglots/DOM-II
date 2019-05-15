@@ -26,10 +26,10 @@ mainimg.addEventListener("mouseleave", event => {
   event.target.style.filter = "";
 });
 
-// keypress body
+// keypress event
 
 let body = document.querySelector("body");
-console.log(body);
+// console.log(body);
 
 body.addEventListener("keydown", event => {
   event.target.style.filter = "invert(100%)";
@@ -39,18 +39,24 @@ body.addEventListener("keyup", event => {
   event.target.style.filter = "";
 });
 
-// on scroll effect
+// Wheel event
 
-let bodyText = document.querySelector(".img-content img");
-console.log(bodyText);
+let mapImg = document.querySelector(".img-content img");
+// console.log(mapImg);
 
-bodyText.addEventListener("wheel", event => {
+mapImg.addEventListener("wheel", event => {
   event.target.style.filter = "invert(100%)";
+});
+
+// drag me
+
+mapImg.addEventListener("drag", event => {
+  event.target.style.filter = "";
 });
 
 // Need to add toggle?
 
-// on load
+// onload
 
 window.addEventListener("load", event => {
   alert("Hey, You're Awesome. Carry On.");
@@ -84,16 +90,6 @@ submitButton.addEventListener("click", event => {
   event.preventDefault();
 });
 
-//   if (input.type == "") {
-//     button.target.style.background = "red";
-//   } else {
-//     button.target.style.background = "green";
-//   }
-
-// resize
-
-// not sure how to implement this
-
 // scroll
 
 const myScroller = document.querySelector("header");
@@ -102,16 +98,6 @@ const myScroller = document.querySelector("header");
 myScroller.addEventListener("scroll", event => {
   event.target.style.backgroundColor = "red";
 });
-
-// myScroller.forEach(link => {
-//   link.addEventListener("scroll", event => {
-//     event.style.color = "red";
-//   });
-// });
-
-// window.addEventListener('click', event=> {
-//     console.log("windowClick!")
-// });
 
 // dbl click example and eventPropagation Example
 
