@@ -48,13 +48,27 @@ mapImg.addEventListener("wheel", event => {
   event.target.style.filter = "invert(100%)";
 });
 
-// drag me
+// drag me removes invert
 
 mapImg.addEventListener("drag", event => {
   event.target.style.filter = "";
 });
 
-// Need to add toggle?
+// Resize
+
+const heightOutput = document.querySelector("#height");
+const widthOutput = document.querySelector("#width");
+
+function reportWindowSize() {
+  heightOutput.textContent = window.innerHeight;
+  widthOutput.textContent = window.innerWidth;
+}
+
+window.onresize = reportWindowSize;
+
+// window.addEventListener("resize", event => {
+//   event.target.style.backgroundColor = "red";
+// });
 
 // onload
 
